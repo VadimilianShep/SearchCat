@@ -1,3 +1,4 @@
+#-*- coding: cp1251 -*-
 from requests import get
 from bs4 import BeautifulSoup as BS
 from PIL import Image, UnidentifiedImageError
@@ -34,7 +35,7 @@ def get_image_from_url(url):
 
 
 if __name__ == "__main__":
-    search_word = 'cat'
+    search_word = 'cats'
     images_urls = get_wiki_images(search_word)
     for img_url in images_urls:
         image = get_image_from_url(img_url)
